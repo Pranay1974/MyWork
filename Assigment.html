@@ -1,0 +1,286 @@
+<!-- Question 1 -->
+<!-- <script>
+    var a=10;
+    var b=20;
+    document.write("before swapping : a= "+a+"b= "+b+"<br>");
+    var temp = a;
+    a=b;
+    b=temp;
+    document.write("before swapping : a= "+a+"b= "+b+"<br>");
+</script> -->
+
+
+<!-- Question 2 -->
+
+<!-- <script>
+    var num =123;
+    document.write("original number :"+num+"<br>");
+    var rev=0;
+    while (num!=0) {
+        var digit = num %10;
+        rev=rev*10+digit;
+        num=Math.floor (num/10);
+    }
+    document.write("Reverse number : "+rev);
+
+</script> -->
+
+
+<!-- Question 3 -->
+
+<!-- <script>
+    var num =5;
+    var fact =1;
+    for ( var i = 1; i < num; i++) {
+        fact*=i;
+        
+    }
+    document.write("factorial of : "+fact);
+
+
+</script> -->
+
+
+<!-- Question 4 -->
+
+<!-- <script>
+
+var num=19;
+    function isPrime(num){
+        if (num<2) {
+            return false;
+        }
+        for (let i = 0; i <=  Math.sqrt(num); i++) {
+            if (num%i===0){
+                return false;
+            }
+            
+        }
+        return true;
+    }
+    
+    if (isPrime(num)) {
+        document.write(num+"is a prime");
+    }
+    else{
+        document.write(num+"is not prime");
+    }
+
+</script> -->
+
+
+<!-- Question 5 -->
+
+<!-- <script>
+    var a=[[1,2,3],[4,5,6]];
+    var b=[[7,8],[9,10],[11,12]];
+    var product = a.map((row,i)=>b[0].map((_,j)=>row.reduce((sum,_,k)=>sum+a[i][k]*b[k][j],0)));
+    document.write("product of matrix : <br>");
+
+    product.forEach(row=>document.write(row.join(" ")+"<br>"));
+
+</script> -->
+
+
+<!-- Question 6 -->
+
+<!-- <script>
+    function calculateSI(pri,rate,time)
+    {
+        var int = (pri*rate*time)/100;
+        return int;
+    }
+    var pri=parseFloat(prompt("Enter the principal amt : "));
+    var rate=parseFloat(prompt("Enter the rate(%) : "));
+    var time=parseFloat(prompt("Enter the time period(year) : "));
+    var simpleinterest = calculateSI(pri,rate,time);
+    document.write("Simple Interest : "+simpleinterest);
+
+</script> -->
+
+
+
+<!-- Question 7 -->
+
+<!-- <script>
+    var arr =[1,2,3,4,5];
+    document.write("Array : "+arr+"<br>");
+    document.write("push : "+arr.push(6)+"<br>");
+    document.write("shift : "+arr.shift()+"<br>");
+    document.write("unshift : "+arr.unshift(0)+"<br>");
+    document.write("slice : "+arr.slice(1,3)+"<br>");
+    document.write("splice : "+arr.splice(2,1)+"<br>");
+    document.write("concat : "+arr.concat([6,7])+"<br>");
+    document.write("reverse : "+arr.reverse()+"<br>");
+    document.write("pop : "+arr.pop()+"<br>");
+
+</script> -->
+
+
+
+<!-- Question 8 -->
+
+    <!-- <script>
+        var emp_detail=[
+        {'eno':1001001,'enm':'amit','esal':10000},
+        {'eno':1001002,'enm':'pankaj','esal':20000},
+        {'eno':1001003,'enm':'ravi','esal':30000}
+        ];
+        var empnumbertofind = 1001002;
+        var emp = emp_detail.find(function(e) { return e.eno===empnumbertofind;});
+        if (emp) {
+            document.write("employee Found : <br>");
+            document.write("employee Number : "+emp.eno+"<br>");
+            document.write("employee Name : "+emp.enm+"<br>");
+            document.write("employee Salary : "+emp.esal+"<br>");
+        }
+        else{
+            document.write("employee with Number : "+empnumbertofind+"not find.<br>");
+        }
+
+
+    </script> -->
+
+
+<!-- Question 9 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Choose your flavor: </h2>
+    <label>
+        <input type="checkbox" id="chocolate">
+        "chocolate"
+    </label>
+    <label>
+        <input type="checkbox"  id="vanilla">
+        "vanilla"
+    </label>
+    <br>
+    <br>
+    <button onclick="checkOrder()">Check Order</button>
+    <script>
+        function checkOrder(){
+            var choc=document.getElementById("chocolate").checked;
+            var van=document.getElementById("vanilla").checked;
+            alert(choc&&van?"You like both Chocolate and Vanilla":choc?"You like Chocolate":van?"You like Vanilla":"PICK ONE!");
+            docment.getElementById("chocolate").checked=false;
+            docment.getElementById("vanilla").checked=false;
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- Question 10 -->
+
+
+<html>
+    <head>
+        <title>Image</title>
+    </head>
+<style>
+    .img{display:none;}
+</style>
+<body>
+    <div>
+        <input type="radio" name="img" id="first" class="img" onchange="text()">
+        <label for="first"><img src="xyz" ></label>
+        <input type="radio" name="img" id="second" class="img" onchange="text()">
+        <label for="second"><img src="omg" ></label>
+        <input type="radio" name="img" id="third" class="img" onchange="text()">
+        <label for="third"><img src="abc" ></label><br><br>
+
+        <input type="text" id="text" readonly>
+
+    </div>
+    <script>
+        function text(){
+            var first,second,third,text;
+            first=document.getElementByID("first")
+            second=document.getElementByID("second")
+            third=document.getElementByID("third")
+            text=document.getElementByID("text")
+            if(first.checked)
+                text.value="first img click"
+            if(second.checked)
+                text.value="second img click"
+            if(third.checked)
+                text.value="third img click"
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- Question 11 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Flavor Picker</title>
+    <script>
+        // Function to update the textbox with the selected flavor
+        function updateTextbox() {
+            var flavor = document.getElementById("flavorSelect").value;
+            document.getElementById("flavorTextbox").value = "You picked " + flavor + ".";
+        }
+    </script>
+</head>
+<body>
+    <h2>Pick Your Ice Cream Flavor</h2> 
+    
+    
+    <select id="flavorSelect" onchange="updateTextbox()">
+        <option value="Vanilla">Vanilla</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Mint">Mint</option>
+        <option value="Cookie Dough">Cookie Dough</option>
+    </select> 
+    
+    
+     <br><br>
+    <input type="text" id="flavorTextbox" readonly>
+
+</body>
+</html> --> 
+
+
+<!-- Question 13 -->
+
+<!-- <html>
+<head>
+<title>AJAX Demo</title>
+<script>
+function AJAXDemo()
+{
+ var xhttp = new XMLHttpRequest();
+ var url="https://api.myjson.com/bins/ms2y6";
+ xhttp.open("GET",url,true);
+ xhttp.send();
+ 
+ xhttp.onreadystatechange=function(){
+  if(xhttp.status==200 && xhttp.readyState==4)
+  {
+document.getElementById("response").innerHTML=xhttp.responseText; 
+  } 
+ };
+ 
+}
+</script>
+</head>
+<body>
+<button onclick="AJAXDemo()">Click To Make AJAX Work</button>
+<div id="response"></div>
+</body>
+</html> -->
